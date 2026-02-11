@@ -272,34 +272,37 @@ INTERNET
 └─────────────────────────────────────────┘
 ```
 
-## Component Inventory
+## Component Inventory with Migration Plan Mapping
 
-| Layer | Component | ID/Name | Status |
-|-------|-----------|---------|--------|
-| **Network** | VPC | vpc-0382b710049feecd6 | ✅ Active |
-| | NAT Gateway | nat-01b8dfbb36ae3f811 | ✅ Active |
-| | Internet Gateway | igw-0bc65b8460df32470 | ✅ Active |
-| **API** | API Gateway | arep4vvhlc | ✅ Active |
-| | Custom Authorizer | 3kf3gf | ✅ Active |
-| **Compute** | Lambda Authorizer | hcg-demo-authorizer | ✅ Active |
-| | Lambda Webhook | hcg-demo-webhook-handler | ✅ Active |
-| **AI/ML** | Supervisor Agent | DP6QVL8GPS | ✅ Active |
-| | HR Agent | IEVMSZT1GY | ✅ Active |
-| | IT Agent | ZMLHZEZZXO | ✅ Active |
-| | Finance Agent | 8H5G4JZVXM | ✅ Active |
-| | General Agent | RY3QRSI7VE | ✅ Active |
-| **Data** | OpenSearch Collection | y3f4j35z37u9awc6sqkc | ✅ Active |
-| | DynamoDB Sessions | hcg-demo-sessions | ✅ Active |
-| | DynamoDB Users | hcg-demo-users | ✅ Active |
-| | DynamoDB Feedback | hcg-demo-feedback | ✅ Active |
-| **Storage** | S3 Knowledge | hcg-demo-knowledge-026138522123 | ✅ Active |
-| | S3 Logs | hcg-demo-logs-026138522123 | ✅ Active |
-| | S3 CloudTrail | hcg-demo-cloudtrail-026138522123 | ✅ Active |
-| **Security** | Secrets Manager | hcg-demo/slack/credentials | ✅ Active |
-| | Secrets Manager | hcg-demo/servicenow/oauth | ✅ Active |
-| | Cognito User Pool | ap-southeast-1_ONwFGintc | ✅ Active |
-| **Observability** | CloudWatch Logs | 5 log groups | ✅ Active |
-| | CloudTrail | hcg-demo-audit-trail | ✅ Active |
+| Layer | Component | ID/Name | Status | Migration Plan Week | Usage & Reason |
+|-------|-----------|---------|--------|-------------------|----------------|
+| **Network** | VPC | vpc-0382b710049feecd6 | ✅ Active | Week 1 | **Usage**: Isolated network for all resources<br>**Reason**: Security isolation, control traffic flow, enable private subnets for Lambda |
+| | NAT Gateway | nat-01b8dfbb36ae3f811 | ✅ Active | Week 1 | **Usage**: Outbound internet for private subnets<br>**Reason**: Lambda needs internet access for Bedrock/Slack APIs while staying in private subnet |
+| | Internet Gateway | igw-0bc65b8460df32470 | ✅ Active | Week 1 | **Usage**: Inbound/outbound internet for public subnets<br>**Reason**: API Gateway and NAT Gateway need internet connectivity |
+| | VPC Endpoints (S3, DynamoDB) | Gateway endpoints | ✅ Active | Week 1 | **Usage**: Private access to AWS services<br>**Reason**: Cost optimization - avoid NAT Gateway charges for S3/DynamoDB traffic |
+| **API** | API Gateway | arep4vvhlc | ✅ Active | Week 2 | **Usage**: REST API for Slack webhooks<br>**Reason**: Serverless entry point, handles throttling, integrates with Lambda authorizer |
+| | Custom Authorizer | 3kf3gf | ✅ Active | Week 2 | **Usage**: Validates Slack request signatures<br>**Reason**: Security - ensures only legitimate Slack requests are processed |
+| **Compute** | Lambda Authorizer | hcg-demo-authorizer | ✅ Active | Week 3 | **Usage**: HMAC-SHA256 signature validation<br>**Reason**: Replaces n8n manual auth, implements Slack security best practices |
+| | Lambda Webhook | hcg-demo-webhook-handler | ✅ Active | Week 3 | **Usage**: Processes Slack events, invokes Bedrock<br>**Reason**: Replaces n8n workflow nodes, serverless event processing |
+| **AI/ML** | Supervisor Agent | DP6QVL8GPS | ✅ Active | Week 5 | **Usage**: Intent classification and routing<br>**Reason**: Replaces n8n LangChain routing logic, uses Claude 3.5 Sonnet for better accuracy |
+| | HR Agent | IEVMSZT1GY | ✅ Active | Week 5 | **Usage**: HR queries (benefits, leave, policies)<br>**Reason**: Domain specialist replacing n8n LangChain agent, native Bedrock memory |
+| | IT Agent | ZMLHZEZZXO | ✅ Active | Week 5 | **Usage**: IT support, troubleshooting, tickets<br>**Reason**: Specialist agent with ServiceNow integration capability |
+| | Finance Agent | 8H5G4JZVXM | ✅ Active | Week 5 | **Usage**: Expense, procurement, budget queries<br>**Reason**: Finance domain specialist with policy knowledge |
+| | General Agent | RY3QRSI7VE | ✅ Active | Week 5 | **Usage**: Fallback for general company info<br>**Reason**: Handles queries outside specialist domains |
+| **Data** | OpenSearch Collection | y3f4j35z37u9awc6sqkc | ✅ Active | Week 4 | **Usage**: Vector search for RAG<br>**Reason**: Replaces Pinecone, native AWS integration with Bedrock Knowledge Bases |
+| | DynamoDB Sessions | hcg-demo-sessions | ✅ Active | Week 2 | **Usage**: Conversation state (8hr TTL)<br>**Reason**: Replaces n8n workflow static data, serverless, auto-scaling |
+| | DynamoDB Users | hcg-demo-users | ✅ Active | Week 2 | **Usage**: Slack-to-enterprise user mapping<br>**Reason**: Replaces n8n HTTP lookup cache, GSI for email queries |
+| | DynamoDB Feedback | hcg-demo-feedback | ✅ Active | Week 2 | **Usage**: User feedback collection<br>**Reason**: Replaces n8n logging, enables analytics and quality tracking |
+| **Storage** | S3 Knowledge | hcg-demo-knowledge-026138522123 | ✅ Active | Week 2 | **Usage**: Knowledge base documents storage<br>**Reason**: Data source for Bedrock KB, versioned for change tracking |
+| | S3 Logs | hcg-demo-logs-026138522123 | ✅ Active | Week 2 | **Usage**: Application and access logs<br>**Reason**: Centralized logging, lifecycle policies for cost optimization |
+| | S3 CloudTrail | hcg-demo-cloudtrail-026138522123 | ✅ Active | Week 2 | **Usage**: Audit trail storage<br>**Reason**: Compliance requirement, 365-day retention for security audits |
+| **Security** | Secrets Manager | hcg-demo/slack/credentials | ✅ Active | Week 1 | **Usage**: Slack bot token, signing secret<br>**Reason**: Secure credential storage, no hardcoded secrets, rotation support |
+| | Secrets Manager | hcg-demo/servicenow/oauth | ✅ Active | Week 1 | **Usage**: ServiceNow OAuth credentials<br>**Reason**: Secure API authentication, 90-day rotation policy |
+| | Cognito User Pool | ap-southeast-1_ONwFGintc | ✅ Active | Week 2 | **Usage**: Enterprise SSO integration (future)<br>**Reason**: SAML 2.0 support for corporate identity provider |
+| | IAM Roles | 4 roles | ✅ Active | Week 1 | **Usage**: Least-privilege access control<br>**Reason**: Security best practice, separate roles for Lambda/Bedrock/Step Functions |
+| **Observability** | CloudWatch Logs | 5 log groups | ✅ Active | Week 2 | **Usage**: Centralized logging with retention<br>**Reason**: Replaces n8n execution logger, structured logs for debugging |
+| | CloudTrail | hcg-demo-audit-trail | ✅ Active | Week 2 | **Usage**: API call auditing<br>**Reason**: Compliance, security monitoring, tracks all AWS API calls |
+| **Integration** | ServiceNow | dev355778 | 🔄 Pending | Week 7 | **Usage**: IT ticket creation and queries<br>**Reason**: Replaces n8n mock service, real ITSM integration with OAuth |
 
 ---
 
