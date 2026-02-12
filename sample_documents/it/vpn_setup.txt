@@ -1,0 +1,56 @@
+StarHub VPN Setup Guide
+
+VPN Access
+StarHub uses Cisco AnyConnect VPN for secure remote access.
+
+Installation - Windows
+1. Visit https://vpn.starhub.com
+2. Login with StarHub email and password
+3. Download for Windows
+4. Run installer and accept license
+5. Restart if prompted
+
+Configuration
+1. Open Cisco AnyConnect
+2. Enter server: vpn.starhub.com
+3. Click Connect
+4. Username: firstname.lastname@starhub.com
+5. Password: Your network password
+6. Enter OTP from authenticator app
+
+Two-Factor Authentication
+1. Install Microsoft Authenticator on mobile
+2. Login to https://myaccount.starhub.com
+3. Security Settings > Set up Authenticator
+4. Scan QR code
+5. Enter verification code
+
+Troubleshooting
+
+Connection Fails:
+- Verify internet connection
+- Check username/password
+- Ensure using vpn.starhub.com
+- Try disconnect and reconnect
+
+Certificate Errors:
+- Update Cisco AnyConnect to latest version
+- Contact IT if persists
+
+Slow Connection:
+- Disconnect and reconnect
+- Check internet speed
+- Try off-peak hours
+
+Can't Access Systems:
+- Verify VPN connected (green icon)
+- Check access permissions
+- Contact IT Support
+
+VPN Policy
+- Use VPN when accessing StarHub systems remotely
+- Never share credentials
+- Disconnect when not using corporate resources
+- Report suspicious activity
+
+Support: itsupport@starhub.com | +65 6825 3000

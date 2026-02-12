@@ -1,0 +1,26 @@
+{
+  "hcg-demo-hr-agent": {
+    "agent_id": "IEVMSZT1GY",
+    "kb_id": "H0LFPBHIAK",
+    "kb_association_id": "H0LFPBHIAK",
+    "status": "linked"
+  },
+  "hcg-demo-it-agent": {
+    "agent_id": "ZMLHZEZZXO",
+    "kb_id": "X1VW7AMIK8",
+    "kb_association_id": "X1VW7AMIK8",
+    "status": "linked"
+  },
+  "hcg-demo-finance-agent": {
+    "agent_id": "8H5G4JZVXM",
+    "kb_id": "1MFT5GZYTT",
+    "kb_association_id": "1MFT5GZYTT",
+    "status": "linked"
+  },
+  "hcg-demo-general-agent": {
+    "agent_id": "RY3QRSI7VE",
+    "kb_id": "BOLGBDCUAZ",
+    "kb_association_id": "BOLGBDCUAZ",
+    "status": "linked"
+  }
+}

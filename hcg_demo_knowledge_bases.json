@@ -1,0 +1,46 @@
+{
+  "hr": {
+    "knowledge_base_id": "H0LFPBHIAK",
+    "knowledge_base_arn": "arn:aws:bedrock:ap-southeast-1:026138522123:knowledge-base/H0LFPBHIAK",
+    "data_source_id": "RXMESFOATH",
+    "ingestion_job_id": "09H6OFDXPR",
+    "document_count": 2,
+    "s3_prefix": "hr-docs/",
+    "index_name": "hcg-kb-hr",
+    "status": "ACTIVE",
+    "documents_indexed": 2
+  },
+  "it": {
+    "knowledge_base_id": "X1VW7AMIK8",
+    "knowledge_base_arn": "arn:aws:bedrock:ap-southeast-1:026138522123:knowledge-base/X1VW7AMIK8",
+    "data_source_id": "WARYSMSQOG",
+    "ingestion_job_id": "SWFSLNOAML",
+    "document_count": 3,
+    "s3_prefix": "it-docs/",
+    "index_name": "hcg-kb-it",
+    "status": "ACTIVE",
+    "documents_indexed": 3
+  },
+  "finance": {
+    "knowledge_base_id": "1MFT5GZYTT",
+    "knowledge_base_arn": "arn:aws:bedrock:ap-southeast-1:026138522123:knowledge-base/1MFT5GZYTT",
+    "data_source_id": "EXOONIPSFS",
+    "ingestion_job_id": "A9DDSA79E3",
+    "document_count": 2,
+    "s3_prefix": "finance-docs/",
+    "index_name": "hcg-kb-finance",
+    "status": "ACTIVE",
+    "documents_indexed": 2
+  },
+  "general": {
+    "knowledge_base_id": "BOLGBDCUAZ",
+    "knowledge_base_arn": "arn:aws:bedrock:ap-southeast-1:026138522123:knowledge-base/BOLGBDCUAZ",
+    "data_source_id": "K2CNYAU2YO",
+    "ingestion_job_id": "JWLNTQPAR0",
+    "document_count": 3,
+    "s3_prefix": "general-docs/",
+    "index_name": "hcg-kb-general",
+    "status": "ACTIVE",
+    "documents_indexed": 3
+  }
+}

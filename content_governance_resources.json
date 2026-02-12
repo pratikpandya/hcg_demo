@@ -1,0 +1,6 @@
+{
+  "governance_lambda_arn": "arn:aws:lambda:ap-southeast-1:026138522123:function:hcg-demo-content-governance",
+  "sync_lambda_arn": "arn:aws:lambda:ap-southeast-1:026138522123:function:hcg-demo-content-sync",
+  "iam_role_arn": "arn:aws:iam::026138522123:role/hcg-demo-content-governance-role",
+  "deployed_at": "2026-02-12T18:20:38.909137"
+}

@@ -1,0 +1,72 @@
+StarHub Procurement Policy
+
+Procurement Authority Levels
+
+Level 1: Up to $1,000
+- Manager approval required
+- Direct purchase allowed
+- Submit receipt for reimbursement
+
+Level 2: $1,001 - $10,000
+- Department Head approval
+- Minimum 2 quotations required
+- Purchase Order must be raised
+
+Level 3: $10,001 - $50,000
+- Finance approval required
+- Minimum 3 quotations
+- Formal PO and vendor evaluation
+
+Level 4: Above $50,000
+- CFO approval required
+- Formal tender process
+- Vendor due diligence and contract review
+
+Procurement Process
+1. Identify need and specifications
+2. Obtain quotations from approved vendors
+3. Evaluate vendors (price 40%, quality 30%, delivery 15%, reputation 15%)
+4. Submit purchase requisition in portal
+5. Finance raises official PO
+6. Verify goods/services on receipt
+7. Vendor submits invoice, payment within 30 days
+
+Approved Vendors
+
+IT Equipment: Dell, HP, Lenovo, Cisco
+Software: Microsoft, Adobe, Salesforce
+Office Supplies: Office Warehouse, Popular
+Professional Services: Pre-approved list on portal
+
+Emergency Purchases
+- Contact Finance immediately
+- Explain urgency and business impact
+- Obtain verbal CFO approval
+- Submit documentation within 24 hours
+
+Software & Cloud Services
+- IT approval required for all software
+- Security review mandatory
+- AWS, Azure, Google Cloud pre-approved
+- Data Processing Agreement required
+
+Prohibited Without Approval
+- Personal items
+- Gifts over $100
+- Political donations
+- Real estate, vehicles, weapons
+
+Conflict of Interest
+Disclose immediately:
+- Personal relationship with vendor
+- Financial interest in vendor
+- Family member works for vendor
+- Receiving gifts from vendor
+
+Gifts from Vendors
+- Under $50: Acceptable
+- $50-$100: Requires disclosure
+- Over $100: Must decline or donate
+- No cash accepted
+
+Contact: procurement@starhub.com | +65 6825 2300

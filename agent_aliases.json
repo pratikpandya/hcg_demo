@@ -1,0 +1,18 @@
+{
+  "hcg-demo-hr-agent": {
+    "agent_id": "IEVMSZT1GY",
+    "alias_id": "VFYW9OV9IU"
+  },
+  "hcg-demo-it-agent": {
+    "agent_id": "ZMLHZEZZXO",
+    "alias_id": "BFBSNUNZUA"
+  },
+  "hcg-demo-finance-agent": {
+    "agent_id": "8H5G4JZVXM",
+    "alias_id": "1ZFUCWCS1K"
+  },
+  "hcg-demo-general-agent": {
+    "agent_id": "RY3QRSI7VE",
+    "alias_id": "9CP8PGSKFQ"
+  }
+}

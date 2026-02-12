@@ -1,0 +1,50 @@
+StarHub Laptop Troubleshooting Guide
+
+Common Issues and Solutions
+
+Laptop Won't Turn On
+1. Check power adapter is connected properly
+2. Try different power outlet
+3. Hold power button for 30 seconds, then try again
+4. If still not working, contact IT Support
+
+Slow Performance
+1. Close unnecessary applications
+2. Restart laptop
+3. Check disk space (need at least 10GB free)
+4. Run Windows Update
+5. Contact IT if issue persists
+
+Wi-Fi Not Connecting
+1. Toggle Wi-Fi off and on
+2. Forget network and reconnect
+3. Restart laptop
+4. Check if other devices can connect
+5. Contact IT Support if only your laptop affected
+
+Blue Screen Errors
+1. Note error code if displayed
+2. Restart laptop
+3. If recurring, contact IT immediately
+4. Do not attempt to fix yourself
+
+Application Crashes
+1. Close and reopen application
+2. Restart laptop
+3. Check for application updates in Software Center
+4. Contact IT if specific application always crashes
+
+Forgotten Password
+See Password Reset Guide or contact IT Helpdesk
+
+Laptop Maintenance
+- Restart at least once per week
+- Install updates when prompted
+- Keep at least 10GB free disk space
+- Run antivirus scan monthly
+- Clean keyboard and screen regularly
+
+IT Support
+Email: itsupport@starhub.com
+Phone: +65 6825 3000
+Available: Monday-Friday 8:30 AM - 6:00 PM
